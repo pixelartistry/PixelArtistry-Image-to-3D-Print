@@ -1,0 +1,34 @@
+# Models (the installer downloads them, never commit them)
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.part
+
+# 3D files and print files: generated, large, never committed
+*.stl
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.3mf
+*.blend
+*.blend1
+*.ctp
+*.chitubox
+*.goo
+
+# ComfyUI outputs
+output/
+temp/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
