@@ -9,18 +9,19 @@ One image in, a **watertight, print-ready 3D model** out. Free and local in Comf
 *The example image from the video, made with Qwen-Image 2.1 at 2048 × 2048.*
 
 > [!IMPORTANT]
-> **Before you start:** set up ComfyUI + TRELLIS.2 first with the **[TRELLIS.2 Installation Guide](https://go.pixel-artistry.com/Trellis2InstallationGuide)**. This installer builds on that setup.
+> **Before you start:** install **[ComfyUI Easy-Install](https://github.com/Tavris1/ComfyUI-Easy-Install)** and **TRELLIS.2** first, by following my **[TRELLIS.2 Installation Guide](https://go.pixel-artistry.com/Trellis2InstallationGuide)**. This installer builds on that setup and won't work without it.
 
 ## What you get
 
 | File | For which GPU | What changes |
 |---|---|---|
+| `workflows/PixelArtistry_Print_00_Image_Qwen.json` | – | Optional first step: Qwen-Image 2.1 text-to-image, 2048 × 2048. Makes the front image |
 | `workflows/PixelArtistry_Print_01_1K.json` | 6–8 GB | Smallest and fastest. Resamples to ~1K. About 300 MB STL |
 | `workflows/PixelArtistry_Print_02_1536.json` | 8 GB+ | The default tier. About 400 MB STL |
 | `workflows/PixelArtistry_Print_03_2K.json` | 16 GB+ | Maximum detail. About 500 MB STL |
 | `workflows/PixelArtistry_Print_04_Multiview.json` | 12 GB+ (see Multiview) | Builds back and sides first, then the 1536 tier |
 
-All four are free. The installer already contains them. You only need `install_win.bat`.
+All five are free. The installer already contains 01–04. Workflow 00 is in `workflows/`: load it by hand, or drag `examples/dragon_front.png` into ComfyUI.
 
 The three single-image workflows use the same models and the same seeds. The tier only changes how much detail survives.
 
@@ -65,7 +66,9 @@ It's safe to run again: everything is set back to the tested versions.
 
 ### 1. Make the image
 
-Use ComfyUI's official **Qwen-Image 2.1 text-to-image** template at **2048 × 2048**. Use the prompt from [`prompts/printable_statue.md`](prompts/printable_statue.md).
+Load [`workflows/PixelArtistry_Print_00_Image_Qwen.json`](workflows/PixelArtistry_Print_00_Image_Qwen.json) (Qwen-Image 2.1 text-to-image, **2048 × 2048**) and use the prompt from [`prompts/printable_statue.md`](prompts/printable_statue.md).
+
+Dragging `examples/dragon_front.png` into ComfyUI loads the exact setup.
 
 Or use any image of your own: square, the full object visible, a plain background.
 

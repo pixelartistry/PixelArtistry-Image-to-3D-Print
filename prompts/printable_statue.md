@@ -1,6 +1,6 @@
 # Prompt formula: a printable statue image
 
-Pixal3D builds the 3D model from this one image, so write the image for the printer, not for the camera.
+TRELLIS.2 (or Pixal3D) builds the 3D model from this one image, so write the image for the printer, not for the camera.
 
 ## The formula
 
@@ -27,7 +27,7 @@ The full statue is centered and completely visible from the bottom of the plinth
 
 ## Settings
 
-- ComfyUI's official **Qwen-Image 2.1 text-to-image** template
+- [`workflows/PixelArtistry_Print_00_Image_Qwen.json`](../workflows/PixelArtistry_Print_00_Image_Qwen.json) (Qwen-Image 2.1 text-to-image)
 - **2048 × 2048** (1:1, 4 megapixels)
 - cfg **1**
 - seed **447606998181495**
