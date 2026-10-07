@@ -15,13 +15,13 @@ One image in, a **watertight, print-ready 3D model** out. Free and local in Comf
 
 | File | For which GPU | What changes |
 |---|---|---|
-| `workflows/PixelArtistry_Print_00_Image_Qwen.json` | – | Optional first step: Qwen-Image 2.1 text-to-image, 2048 × 2048. Makes the front image |
+| `workflows/PixelArtistry_Print_00_Image_Qwen.json` | 8–12 GB | Optional first step: Qwen-Image 2.1 text-to-image, 2048 × 2048. Makes the front image |
 | `workflows/PixelArtistry_Print_01_1K.json` | 6–8 GB | Smallest and fastest. Resamples to ~1K. About 300 MB STL |
 | `workflows/PixelArtistry_Print_02_1536.json` | 8 GB+ | The default tier. About 400 MB STL |
 | `workflows/PixelArtistry_Print_03_2K.json` | 16 GB+ | Maximum detail. About 500 MB STL |
 | `workflows/PixelArtistry_Print_04_Multiview.json` | 12 GB+ (see Multiview) | Builds back and sides first, then the 1536 tier |
 
-All five are free. The installer already contains 01–04. Workflow 00 is in `workflows/`: load it by hand, or drag `examples/dragon_front.png` into ComfyUI.
+All five are free. The installer already contains them. You only need `install_win.bat`. You can also drag `examples/dragon_front.png` into ComfyUI to load the image setup.
 
 The three single-image workflows use the same models and the same seeds. The tier only changes how much detail survives.
 
@@ -51,7 +51,7 @@ What the installer does:
 3. Picks the right WTiVo build for your GPU (RTX 50 or RTX 20/30/40)
 4. Installs the Python dependencies into `python_embeded`
 5. Runs a quick watertight test on your GPU
-6. Installs the four workflows and the dragon example image
+6. Installs the five workflows and the dragon example image
 7. Checks the models and downloads the missing ones from Hugging Face
 8. Looks for Blender
 

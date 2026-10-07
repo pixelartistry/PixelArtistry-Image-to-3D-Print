@@ -34,6 +34,8 @@ The full statue is centered and completely visible from the bottom of the plinth
 - 50 steps, euler / simple, prompt enhancer (`refine_prompt`) off
 - Models: `qwen_image_2.1_int8_convrot`, `qwen3vl_8b_int8_convrot`, `qwen_image_2.1_vae_bf16`
 
+The workflow's own defaults are 25 steps and seed 0. Dragging `examples/dragon_front.png` into ComfyUI loads the dragon setup (50 steps, the seed above).
+
 The same seed only reproduces the same image with the same model files, steps and sampler. If your result looks different, check those first.
 
 The finished image is in [`examples/dragon_front.png`](../examples/dragon_front.png). The workflows load it by default.
